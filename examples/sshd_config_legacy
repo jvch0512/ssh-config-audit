@@ -1,0 +1,15 @@
+# a server that has been "temporarily" open since 2016
+Port 22
+Protocol 2,1
+PermitRootLogin yes
+PasswordAuthentication yes
+PermitEmptyPasswords no
+X11Forwarding yes
+MaxAuthTries 10
+LogLevel QUIET
+Ciphers aes128-ctr,aes256-cbc,3des-cbc
+MACs hmac-sha2-256,hmac-md5
+PermitUserEnvironment yes
+GatewayPorts yes
+UsePAM yes
+Subsystem sftp /usr/lib/openssh/sftp-server

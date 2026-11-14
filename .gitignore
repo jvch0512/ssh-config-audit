@@ -1,0 +1,5 @@
+_build/
+deps/
+*.beam
+ssh-config-audit
+erl_crash.dump

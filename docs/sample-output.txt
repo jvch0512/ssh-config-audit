@@ -1,0 +1,34 @@
+grade F, score 0/100, 11 findings
+CRITICAL SSH001 (line 4)
+         root can log in over SSH with a password
+         fix: PermitRootLogin no
+CRITICAL SSH004 (line 3)
+         SSH protocol 1 is allowed and is broken
+         fix: Protocol 2
+HIGH     SSH002 (line 5)
+         password logins are enabled: passwords can be brute-forced
+         fix: PasswordAuthentication no
+HIGH     SSH008 (line 12)
+         users can set environment variables, which can bypass restrictions
+         fix: PermitUserEnvironment no
+MEDIUM   SSH005 (line 10)
+         weak cipher enabled: aes256-cbc, 3des-cbc
+         fix: remove the weak entries or drop the ciphers line to use the modern defaults
+MEDIUM   SSH005 (line 11)
+         weak MAC enabled: hmac-md5
+         fix: remove the weak entries or drop the macs line to use the modern defaults
+MEDIUM   SSH006 (line 7)
+         X11 forwarding is on and widens the attack surface of a server
+         fix: X11Forwarding no
+MEDIUM   SSH007 (line 8)
+         MaxAuthTries is 10: too many guesses per connection
+         fix: MaxAuthTries 3
+MEDIUM   SSH009 (line 13)
+         GatewayPorts exposes forwarded ports to the whole network
+         fix: gatewayports no
+MEDIUM   SSH010 (line 9)
+         LogLevel quiet hides failed logins and key use
+         fix: LogLevel VERBOSE
+MEDIUM   SSH011 (not set)
+         no AllowUsers or AllowGroups: every local account may try to log in
+         fix: AllowGroups ssh-users
