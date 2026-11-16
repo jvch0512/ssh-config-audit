@@ -2,6 +2,8 @@
 
 Every Linux server has an `sshd_config`, and most were last read the day they were installed. ssh-config-audit grades it against a hardening baseline, line by line, with the exact setting to change.
 
+![Terminal demo of ssh-config-audit on its sample data](docs/demo.svg)
+
 **Live demo:** https://jvch0512.github.io/ssh-config-audit/ (a report on a deliberately bad config in `examples/`)
 
 Elixir, standard library only. Builds to a single `escript` file.
